@@ -12,17 +12,10 @@
 
 ![img](https://user-images.githubusercontent.com/29582986/156346354-4ffc31f9-9266-4423-8a6f-c370f013fddb.png)
 
-
-function print(Value)
-  gma.feedback(Value)
-  gma.echo(Value)
-end
-
-function main()
-	print('Hello World')
-end
-return main
-
-
 print - название функции
 ('Hello World')  - значение которое мы отправляем в функцию print на переменную Value
+
+------------------------------------------------  
+![img2](https://user-images.githubusercontent.com/29582986/156346553-39c353c9-7c4e-46aa-b470-b5402d80b26b.png)
+
+Для удобства написания и проверки кода лучше всего использовать сразу 2 окна в ma2 это Command Line Feedback и System Monitoring. Первое окно просто отклик командной строки. Второе уже более подробное с описанием ошибок. Например на скриншоте видно что в коде есть ошибка на 9 строке, там нету или не хватает скобок.
