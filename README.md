@@ -10,7 +10,8 @@
 
 Для тех кто только хочет начать изучать LUA вот небольшой пример код как должно работат:
 
-(https://user-images.githubusercontent.com/29582986/156346175-1f137610-e90c-4687-9282-123bf70fe4ae.png)
+![img](https://user-images.githubusercontent.com/29582986/156346354-4ffc31f9-9266-4423-8a6f-c370f013fddb.png)
+
 
 function print(Value)
   gma.feedback(Value)
