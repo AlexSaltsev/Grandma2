@@ -565,7 +565,7 @@ gma.show.getobj.handle(name)
 --	Пример использования
 
 local handle = gma.show.getobj.handle('Group 1') -- объявляем переменную handle, присваиваем ей значение handle ID объекта 'Group 1'
-gma.feedback(class) -- выводим информацию в Command Line Feedback
+gma.feedback(handle) -- выводим информацию в Command Line Feedback
 
 --
 --]]
