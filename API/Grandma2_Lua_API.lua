@@ -813,7 +813,7 @@ local handle = gma.show.getobj.handle('Group 1') -- объявляем пере�
 local index = 1
 local value=100
 local set = gma.show.property.set(handle,index,value) -- объявляем переменную amount, присваиваем ей число с количеством свойств объекта handle
-gma.feedback(get) -- выводим информацию в Command Line Feedback
+gma.feedback(set) -- выводим информацию в Command Line Feedback
 
 --
 --]]
@@ -832,7 +832,7 @@ local handle = gma.show.getobj.handle('Group 1') -- объявляем пере�
 local property_name = 1
 local value=100
 local set = gma.show.property.set(handle,index,value) -- объявляем переменную amount, присваиваем ей число с количеством свойств объекта handle
-gma.feedback(get) -- выводим информацию в Command Line Feedback
+gma.feedback(set) -- выводим информацию в Command Line Feedback
 
 --
 --]]
