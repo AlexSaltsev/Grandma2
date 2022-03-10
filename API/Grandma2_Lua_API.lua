@@ -1,8 +1,8 @@
 ------------------------------------------------
 ------------ 
 ------------	Grandma2 Lua API 
-------------	Version: 0.0.1
-------------	Update date: 09.03.2022
+------------	Version: 0.0.2
+------------	Update date: 10.03.2022
 ------------ 
 ------------------------------------------------
 ------------	Created by AlexSaltsev.ru
@@ -25,7 +25,8 @@ gma.echo(var)
 --
 -- Пример использования
 
-gma.echo('Hello World')
+local var='Hello World'
+gma.echo(var)
 
 -- SM Feedback: "'Hello World"
 --]]
@@ -38,7 +39,8 @@ gma.feedback(var)
 --
 -- Пример использования
 
-gma.feedback('Hello World')
+local var='Hello World'
+gma.feedback(var)
 
 -- CMD Feedback: "Hello World"
 --]]
@@ -51,7 +53,9 @@ gma.cmd(command)
 --
 -- Пример использования
 
-gma.cmd('ClearAll; Channel 1 thru ; at 100')
+local command = 'ClearAll; Channel 1 thru ; at 100'
+gma.cmd(command)
+
 
 --]]
 
@@ -89,7 +93,8 @@ gma.sleep(sleep_seconds)
 --
 --	Пример использования
 
-gma.sleep(5);
+local sleep_seconds = 5
+gma.sleep(sleep_seconds)
 
 --]]
 
@@ -100,7 +105,8 @@ gma.build_date()
 --
 -- Пример использования
 
-gma.feedback(gma.build_date())
+local build_date = gma.build_date()
+gma.feedback(build_date)
 
 --]]
 
@@ -111,7 +117,8 @@ gma.build_time()
 --
 --	Пример использования
 
-gma.feedback(gma.build_time())
+local build_time = gma.build_time()
+gma.feedback(build_time)
 
 --]]
 
@@ -122,7 +129,8 @@ gma.git_version()
 --
 --	Пример использования
 
-gma.feedback(gma.git_version())
+local git_version = gma.git_version()
+gma.feedback(git_version)
 
 --]]
 
@@ -133,7 +141,8 @@ gma.gethardwaretype()
 --
 --	Пример использования
 
-gma.feedback(gma.gethardwaretype())
+local gethardwaretype = gma.gethardwaretype()
+gma.feedback(gethardwaretype)
 
 --]]
 
@@ -185,6 +194,7 @@ gma.export_json(filename,table_data)
 local filename = 'testName.json' -- название файла.
 local table_data ={1,2,3,4,5}	--	таблица с данными
 gma.export(filename,table_data) 
+
 --]]
 
 ---Функция импортирует таблицу из файла 
@@ -212,6 +222,7 @@ gma.timer(function_one,step_delay,max_count,function_two)
 --
 --	Пример использования
 ---
+
 function function_one(number1, number2)
 	gma.feedback('function 1 run')
 	gma.feedback('Time in sec = '..number1..' Step is '..number2)
@@ -229,6 +240,7 @@ gma.timer(function_one,step_delay,max_count,function_two)
 	
 end
 return main
+
 --]]
 
 ---Функция запрашивает системное время в секундах
@@ -237,7 +249,10 @@ gma.gettime()
 -- result: string - возвращает данные текущего времени в секундах
 --
 --	Пример использования
-gma.feedback(gma.gettime())
+
+local gettime = gma.gettime()
+gma.feedback(gettime)
+
 --]]
 
 ------------------------------------------------
@@ -548,6 +563,7 @@ local varname='test_varname'
 local value='text'
 gma.show.setvar(varname,value)
 gma.cmd('listvar')
+
 --
 --]]
 
@@ -721,9 +737,9 @@ gma.show.getobj.compare(handle1,handle2)
 local handle1 = gma.show.getobj.handle('Seq 1') -- объявляем переменную handle, присваиваем ей значение handle ID объекта 'Seq 1 Cue 1'
 local handle2 = gma.show.getobj.handle('Seq 2') -- объявляем переменную handle, присваиваем ей значение handle ID объекта 'Seq 2 Cue 1'
 if gma.show.getobj.compare(handle1, handle2) then 
-gma.feedback('true') 
-else 
-gma.feedback('false') 
+	gma.feedback('true') 
+	else 
+	gma.feedback('false') 
 end
 
 --
